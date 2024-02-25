@@ -9,8 +9,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Created by newuser for 5.9
-
 # My aliases
 alias la="ls -a"
 alias ll="ls -l"
@@ -27,8 +25,8 @@ SAVEHIST=10000
 setopt appendhistory
 
 # My plugins (always last)
-source /home/christian/.config/my-zsh-config/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/christian/.config/my-zsh-config/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
