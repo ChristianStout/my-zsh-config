@@ -13,6 +13,11 @@ fi
 alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
+alias v="nvim"
+alias v.="nvim ."
+alias gaa="git add ."
+alias gca="git commit -m"
+alias notes="nvim ~/Notes"
 
 # My custom varibles
 export ZSH_CUSTOM=~/.config/my-zsh-config
@@ -34,6 +39,9 @@ if [ -x /usr/bin/dircolors ]; then
 	alias fgrep='fgrep --color=auto'
 	alias egrep='egrep --color=auto'
 fi
+
+# Source Rust
+source "$HOME/.cargo/env"
 
 # My plugins
 source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
