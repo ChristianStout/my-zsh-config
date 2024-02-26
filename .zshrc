@@ -35,10 +35,15 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
-# My plugins (always last)
+# My plugins
 source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme
+source $PLUGINS_DIR/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+
+# Bind keys for substring history
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
