@@ -6,7 +6,7 @@
 neofetch
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # My aliases
@@ -23,6 +23,17 @@ HISTFILE=$ZSH_CUSTOM/zsh_history
 HISTZISE=10000
 SAVEHIST=10000
 setopt appendhistory
+
+# Make ls colorful :)
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls='ls --color=auto'
+	alias dir='dir --color=auto'
+	alias vdir='vdir --color=auto'
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
+fi
 
 # My plugins (always last)
 source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
