@@ -17,11 +17,14 @@ alias v="nvim"
 alias v.="nvim ."
 alias gaa="git add ."
 alias gca="git commit -m"
-alias notes="nvim ~/Notes"
+alias notes="pushd ~/Documents/notes"
+alias proj="pushd ~/Documents/projects"
+alias repos="pushd ~/Documents/repos"
+alias cd="pushd"
 
 # My custom varibles
-export ZSH_CUSTOM=~/.config/my-zsh-config
-export PLUGINS_DIR=~/.config/my-zsh-config/plugins
+export ZSH_CUSTOM=~/.dotfiles/zsh
+export PLUGINS_DIR=~/.dotfiles/zsh/plugins
 
 # Set zsh history file
 HISTFILE=$ZSH_CUSTOM/zsh_history
