@@ -1,6 +1,5 @@
 #!/bin/bash
 
-dir=$(pwd)
 rm -rf plugins/*
 cd plugins
 
