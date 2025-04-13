@@ -61,3 +61,7 @@ bindkey '^[[B' history-substring-search-down
 
 # Make pushd quiet
 setopt PUSHDSILENT
+
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=/home/lambda/Documents/repos/odin:$PATH
+
